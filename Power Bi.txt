@@ -1,0 +1,99 @@
+Pasos 
+Get data ->Tablas de excel, pdf,bases de datos fuentes web etc
+
+dp(data preparation)->Limpiamos y trabajamos con el query editor 
+
+DM(data Modeling )->De las tablas de datos creamose estructuras relacionaels, modelos 
+
+DV(data visualizacion)->Representaciones graficas
+
+DR->Data reporting 
+
+Caso compañia appol resumen de gastos de 2019 a 2021
+Quieren ver indicadores de utilidad  y % margen 
+
+Itulidad =$Ganancias (Ingresos - gastos)
+Margen=%Proporcion de utilidad respecto ingresos (Utilidad/Ingresos ) 
+
+
+-----------------------
+Get_data 
+Obetener Datos 
+
+Seleccionamos el excel que querramos y realizamos el cambio pertinente que querramos y podemos darle el actualizar si alteramos alguna parte de la tabla ------------
+
+Preparacion_
+No usamos query editor para las operaciones para eso usamos los DAX
+Transformar datos y vemos que nos abre la nueva ventana con el editor de power query 
+
+Primeras acciones, quitar filas iniciales nulas 
+
+Y marcar luego el usar la primera fila como encabezado 
+
+Despues debemos dar formato correpondiente a cada valor 
+
+-------------------------
+
+En el query editor podemos hacer 3 modificaciones principales 
+
+Transform
+Add Column podemos crear indices extraer fechas y años 
+
+---------------------
+
+Funcion situacion de extraer caracteres
+
+Ejemplo extraer en los periodos primeros dos 
+
+Podemos agregar una columna extrayendo con primeros 2 caracteres y ultimos 4
+
+Vemos que podemos hacer tanto del agregar columna como,
+entre delimitadores
+desopues de delimitadores
+Agregar o transformar una columna 
+
+-----------------------
+
+Data modeling 
+
+Es establecer las relaciones entre las tablas
+
+Podemos desde el primer encabezado generar los valores y desde alli vamos haciendo la subida de los tipos de productos 
+
+Tenemos que establecer  previo entonces la relacion 
+
+Entonces una vez establecimos la relaciones podemos generar tablas o visualizaciones combinadas 
+
+
+
+----------------------------------------
+
+DAX
+
+nueva medida vs Nueva columna 
+
+Ejemplo calculod de beneficios 
+
+Ejemploe n la tabla marcamos 
+Pais ingresos gastos 
+
+y cuando damos click en el expandir podemos ver que cambiemos las formas para las direferencias 
+
+Para hacer una llamada a cualquier elemento voy a guiarme a la vista de columnas y desde alli damos click en el nueva columna y platenamos la formula 
+
+nombreColumna = 'nombreTabla'[Campo] opracion
+
+Si queremos tambien podemos hacerlo desde la vista normal de la tabla y dar en la creacion de un nuevo elemento click derecho nueva medida 
+
+Caso de division 
+el ultimo valor es el que se queda en caso de que no tengamos denominador 
+Margen = DIVIDE([Total Utilidad],[Total Ingresos],0)
+
+----------------------------------
+
+Interacciones y filtros 
+segmentacion
+
+------------------------------
+Para los cambios de las visuales nos vmaos a ver
+

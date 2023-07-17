@@ -1,0 +1,1832 @@
+UnidadUno
+
+Instalar el sqlServer de manera basica sin personalizar 
+
+Link de descarga
+
+https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+
+Cualqueira de las 2 versiones el devoloper o el express
+
+En este caso estaremos trabajando con el developer 
+
+Despues cuando tengamos la opcion bajamos el smms
+
+Hacemos la instalacion por defecto 
+
+En nuestro costado nos sale el total de las bases de datos 
+
+Comando basico para crear una base de datos
+------------------------
+Conocimiento previos 
+
+Concepto de abstraccion
+La abstracción es una capacidad intelectual que consiste en
+separar un elemento de su contexto para analizarlo y hacerse
+un concepto de este.
+La palabra proviene del latín abstrahĕre, que quiere decir
+‘arrastrar lejos’, ‘separar’ o ‘apartar’. De esta manera,
+abstracción significa acción y efecto de apartar algo para
+comprenderlo
+
+Necesidad de abstraccion
+
+Por lo tanto, el análisis de los
+datos proporcionados por un
+cliente, es crucial y medular para el
+proyecto, así como su análisis
+abstracción de los mismos.
+• Un análisis erróneo, detonará un
+proyecto deficiente y que no
+cumpla al 100% con la satisfacción
+del cliente
+
+---------------------------------------------
+
+Conceptos de bases de datos  previos
+
+Ejemplo categorizacion de una biblioteca falta de plasticidad y practicidad
+
+DIFERENCIA ENTRE INFORMAICON Y DATOS
+datos= corresponde a un registro de algo
+informacion= conjunto de datos que recibe un valor agregado
+
+BASE DE DATOS
+Conjunto de informacion almacenada y consultada sistematicamente
+facilmente escalable
+
+nos permite a traves del poder de computo facilitar el uso de nuestra informacion
+
+sistema gestor de base de datos
+Una base de datos es una colección organizada de información
+estructurada, o datos, típicamente almacenados
+electrónicamente en un sistema de computadora. Una base de
+datos es usualmente controlada por un sistema de gestión de
+base de datos (DBMS). En conjunto, los datos y el DBMS, junto
+con las aplicaciones que están asociados con ellos, se conocen
+como un sistema de base de datos, que a menudo se reducen a
+solo base de datos
+
+Un Sistema Gestor de Base de Datos como Oracle o MySQL, son
+los encargados de gestionar varias bases de datos y
+potencializar su explotación con diferentes características.
+
+Base de datos relacional
+
+
+Una base de datos relacional es un tipo de base de datos que
+almacena y proporciona acceso a puntos de datos relacionados
+entre sí. Las bases de datos relacionales se basan en el modelo
+relacional, una forma intuitiva y directa de representar datos
+en tablas. En una base de datos relacional, cada fila de la tabla
+es un registro con un ID único llamado clave. Las columnas de
+la tabla contienen atributos de los datos, y cada registro
+generalmente tiene un valor para cada atributo, lo que facilita
+el establecimiento de las relaciones entre los puntos de datos.
+
+nosotros tenemos datos
+
+organizados en tablas con campos y registros
+
+los campos hacen referencia a las columnas y las filas a los registros
+
+el modelo entidad relacion son los sql(se explaya despeus)
+
+
+------------------------------------------------------
+
+Que es es el modelado y que es el DER
+
+Diagrama de entidad relacion 
+
+un modelo de datos otorga los medios necesarios para una abstraccion 
+
+Modelo entidad relacion
+
+Que es un metodo para diseñar base de datos que son implementados  a traves de SGDB 
+este se reprensta a traves de diagramas y esta formado por varios elementos
+
+El DER es el  ultilizado para realizar el modelado entidad-relacion el cual pertenece al
+UML 
+
+
+en este tenemos entidades atributos y relaciones
+
+las ENTIDADES represetnan cosas u objetos 
+estos se representan como rectangulos
+
+que tienen relacioens entre si
+
+Luego los atributos
+
+se presentan como ovalos 
+
+cada entidad tienen sus caracteristicas propias estas son las que dan sus atributos
+
+-----------------------------------
+
+Relaciones 
+
+1 a 1 uno a uno
+1 a M uno a mucho
+
+M a M Mucho a mucho
+
+M a 1 Mucho a 1
+
+
+Concepto de subtablas o intermedias para las relaciones de mucho a mucho
+
+tenemos el verbo que es un rombo nos define la accion de union de una entidad con otra 
+
+ejemplo concesionaria
+
+1 persona puede (tener = rombo) mucho autos relacion 1:M
+tambien se puede encontrar la misma como 1:N o 1aN 
+
+
+
+
+
+
+
+
+----------------------------------------------
+SQL es un lenguaje de programacion estandar para manejar una base de datos relacional
+donde podemos hacer consultas modificaciones y crear tablas o columnas dentro de ellas
+poder utilizar esa informacion
+
+para esto tenemos un SGBD(sistemas gestor de base de datos) como intermediario 
+y de esta manera podemos conectar nuestro lenguaje con otro como seria c# java etc
+
+es un lenguaje estable  y que da bastante flexibiladad para el acceso a la base de datos
+
+
+
+
+Tenemos dentro del SQL el lenguaje DDL
+
+DATA DEFINITION LENGUAGE
+define las estructuras
+como van a ser las tablas como van a ser los regusitros etc
+
+DML 
+
+DATA MANIPULATION LENGUAGE
+nos permite una vez formada las tablas las consultas e interacciones con las mismas 
+
+DCL 
+data control lenguage 
+controlar los permisos de acceso a la base de datos relacionales 
+
+el lenguaje es estandar
+
+
+TENEMOS TAMBIEN NOSQL
+No necesitamos definiciones tan estrictas
+podemos tener repeticiones y secucias diferentes 
+pero es porque se prioriza el rendimineto 
+
+ejemplo dynamodb
+
+
+Podemos ver 
+en finanzas es ideal manejar bases de datos relacional
+en entornos de altisima demanda como quzia puede ser mas util una no relacional
+
+la diferencia es a gran gran escala 
+
+Los datos dominan en este momento 
+
+la informacion de machine learning de los trabajos mas solicitados nos sirven para 
+tener lo necesario 
+
+
+-------------------------------------
+Explaye 
+
+DDL (Data definition lenguage)
+proporcianos por el sistema de gestion y nos permite las divisiones de las estructuras
+COMANDO
+CREATE crear
+ALTER alternar
+DROP eliminar
+RENAME cambiar el nombre
+TRUNCATE eliminar todos los registros de una tabla
+COMMENT deja un comentario en la tabla 
+ 
+
+DML DATA MANIPULATION LENGUAGE
+Hacer consultas en los datos y modificaciones de los mismos 
+
+SELECT seleccionar de 
+INSERT insertar INTO
+UPDATE actualizar usa SET
+DELETE borrar
+MERGE 
+CALL
+EXPLAIN PLAN
+LOCK TABLE 
+
+DCL DATA CONTROL LENGUAGE
+Lenguaje de control de datos
+permiten controlar el acceso a la base de datos
+
+GRANT 
+REVOKE
+
+
+TCL TRANSACTION CONTROL LENGUAGE
+permite controlar el procedimiento de transacciones en  la  
+COMMIT permiso a otra sesion
+ROLLBACK solo funciona si non hiciste el commit
+SAVEPOINT
+SET TRANSACTION
+
+
+
+
+
+
+
+------------------------------------
+
+Ingreso al SQLSERVER
+
+tenemos el nombre de nuestro usuario y podemos ver las situaciones de autenticacion correspondiente
+ 
+
+tenemos la databases default
+
+los login son los usuarios con los permisos
+
+los triggers
+
+la conexion realizada
+si tocamos en conectar nos inicializa o termina la conexion 
+
+
+Ejecutamos en newQuery para poder desplegar la ventana de trabajo
+	 
+
+Del lado derecho tenemos ventanas emergentes con informacion si nosotros seleccionamos
+el view podemos acceder a mas vistas 
+
+si seguimos en la rama del master nos mantemos en una vacia central 
+
+
+
+-------------------------------------
+
+Concepto de llaves primaria 
+
+este valor no puede estar en blanco
+el mismo es un identificador unico para mis registros 
+no puede haber dos elementos de un registro con dos llaves primarias iguales
+
+ejemplo
+
+todos como personas tenemos un dni que seria nuestro identificador unico
+
+Luego si tenemos ese metodo en otra tabla podemos establecer las relaciones aqui entra el
+conceptro de llaves foraneas 
+
+Foreign key
+
+Estas son llaves primarias que usamos en otras tablas para establecer las reclaciones
+
+ejemplo
+
+una persona que paga una cuenta y en la misma sale el numero de transaccion que seria 
+la llave primaria de la cuenta y se relaciona con la perosna con el dni de la perosna
+la misma el Foreign key en la segunda tabla pese a ser llave primaria en la tabla persona 
+
+Podemos tener primary key simples y compuestas 
+
+
+
+
+
+-------------------------------------
+
+Comentarios de una linea --
+
+Comentarios de  bloque  /**/
+
+
+
+
+-------------------------------
+Creacion de una base de datos
+
+grafica
+pararnos en la base de datos
+
+seleccionar new data base
+
+poner el nombre 
+
+seleccionar las primary  las variables, tamaño inicial como initial size
+
+vemos el maxsize que se puede cambiar el como crece la base de datos y lo que puede alcanzar  
+
+la direccion de donde se va a guardar tambien esta presente 
+
+si tocamos un f5 nos hace el refresh
+
+para elminar solo tocamos el f5 
+
+
+------------------------------------------------
+Comando CREATE
+
+(Por buena practica lo mejor es trabajar con las palabras reservadas en mayuscula 
+y el resto en minuscula)
+
+Create database nombre de la tabla y cerramos con punto y coma ;
+
+
+Ejemplo 
+
+
+//Escritura en camelCase
+
+Create database baseDeDatosUno;
+
+//Escritura en snake_case
+
+Create database base_de_datos_uno;
+
+Para crear una clase de prueba 
+
+igual si queremos crear una base de datos de manera completa 
+debemos hacer lo  siguiente
+
+debemos estar en el master
+
+
+/*Ejemplo ejecucion completa*/
+
+create database ventas
+ON 
+primary
+	( 
+	/*Primero pasamos el nombre que va a tener*/ 
+	name=ventas1primary,
+	/*Ubicacion del archivo*/
+	filename='D:\CURSOS TODOS\Clase Completas SQL\Server\DataBases\vantas1primary.mdf',
+	/*Tamaño*/
+	size=50MB,
+	/*Capacidad maxima almc*/
+	Maxsize=200,
+	/*Aumento*/
+	filegrowth=20),
+filegroup ventas1FG
+	(
+	name=ventas1FG,
+	filename='D:\CURSOS TODOS\Clase Completas SQL\Server\DataBases\ventas1FG.ndf',
+	size=200MB,
+	Maxsize=800,
+	filegrowth=100)
+Log on
+	(name=ventas1log,
+	filename='D:\CURSOS TODOS\Clase Completas SQL\Server\DataBases\ventas1log.ldf',
+	size=200MB,
+	Maxsize=800,
+	filegrowth=100)
+
+
+
+si quisieramos borrar una base de datos
+usamos el drop database nombreDataBase
+
+en este caso deberiamos solo ejecutar
+
+drop database Ventas1
+
+Indicar sobre que seleccionar para el ejecutar
+podemos usar le f5
+
+
+
+
+
+---------------------------------------
+
+Como crear una tabla 
+No debe haber tablas con nombre repetidos 
+
+
+
+
+A manera visual podemos hacerlo indicando con el id 
+
+Podemos hacerlo con click derecho new table 
+
+en vez de tener el aa o not null tenemos el all null
+
+tenemos nvarchar como tipo de dato en vez de solo el varchar 
+
+podes hacer una tabla con
+
+id 
+
+nombre
+
+telefono
+
+
+hacemos click derecho sobre el query y ponemos el Save y le damos un nombre en este caso
+le damos el name Clientes
+
+
+Podemos ver una vez recargado como cargar los datos de la tabla de manera manual 
+
+tocamos click derecho sobre la tabla en el apartado de tablas
+ y nos salen las columnas para completarla 
+
+lo cargamos le damos el close actulizamos y lo realiza automaticamente 
+
+
+Ahora vemos como cargarla mediante el lenguage
+
+para hacerlo de forma escrita lo que hacemos es usar el create pero en vez de estar
+
+en el master debemos estar parados en la base de datos  donde la querramos crear
+
+comando :
+
+create table nombreTabla(
+
+	 nombreDato tipoDato,
+	nombreDato tipoDato,
+	nombreDato tipoDato,
+	nombreDato tipoDato
+
+)
+
+
+
+Si queremos borrar una tabla lo hacemos con  el drop abierto en el canal que correeponda 
+
+
+drop tbale nombreTabla
+
+
+ejemplos
+
+
+create table producto(
+
+		id int not null,
+		nombreProducto nvarchar(40),
+		descripcion nvarchar(200))
+	
+
+
+--------------------------
+
+Alterar una tabla (Realizar correpndiente modificacion)
+
+Podemos pasarle a una tabla ya construida mas datos con el tipo de los mismos determinados
+
+recordar siempre aclarar si tiene que haber por lo mnenos una fila no nula con el not null
+
+Caso de agreagar:
+
+alter table nombreTabla
+add
+columnaNombre tipoDato nuliadad
+
+Caso de borrar
+alter table nombreTabla
+drop column columnaNombre 
+
+alter table nombreTabla
+alter
+column columnaNombre tipoDato 
+
+------------------------------------
+Primary key
+
+Concepto de llave principal indicador unico que diferencia a cada elemento
+
+La restricción PRIMARY KEY identifica de forma única cada registro en una tabla.
+
+Las claves primarias deben contener valores únicos y no pueden contener valores NULL.
+
+Una tabla solo puede tener una clave principal, que puede consistir en campos simples o múltiples.
+
+
+para definirla nosotros vemos de seleccioanr en la apertura de la tabla y haceoms un set primary key 
+
+Para definirla desde el lenguaje podemos solo agregarle la palabra primary key cuadno cremaos el atributo y nos la crea demanera directa 
+
+
+Ejemplo
+
+create table producto(
+
+		id int primary key not null,
+		nombreProducto nvarchar(40),
+		descripcion nvarchar(200))
+
+-----------------------------------------
+Tambien podemos usar la palabra alter que nos permite hacer las modificaicones corresponditenes
+
+
+
+ALTER TABLE producto ADD precio int;
+
+
+
+
+-----------------------------------------------------------------
+
+Select y las vistas en las tablas 
+
+A modo visual tocamos en vieew
+new view
+y seleccionamos las columnas que queremos ver en las vistas 
+
+
+
+
+Instruccion SELECT 
+Objetivo traer el retorno
+
+
+Traer todo de una base de datos
+
+SELECT * FROM nombreBaseDatos ;
+
+SELECT columna1,columna2,etc from database[tablaNombre];
+
+
+select columna as renombreColumna from bd.[tabla];
+
+si queremos ver menos datos
+
+select top(cantidad de datos)* from nombreTabla
+
+Practica solocitar la muestra de datos 
+10 tablas del adeventure
+
+
+
+-------------------
+Distinct la usamos para conocer datos unicos o diferentes
+
+SELECT DISTINCT(columna) FROM bd.tabla;
+
+esto nos va a traer  el valor que puede tomar la columna
+
+Ordenamiento por cada elemento que creamos
+-----------------------------
+
+Order by
+
+Podemos ordenar de manera descendete o ascendete de manera que querramos
+
+SELECT * FROM bd.tabla ORDER BY columna ASC; (Ordena ascendete)
+
+SELECT * FROM bd.tabla ORDER BY columna DESC; (Ordena descendete)
+
+Ordenamiento por cada elemento que creamos
+
+Podemos tambien hacerlo por el metodo grafico con el sector sortby
+
+en la herramienta grafica cuando ejecutamos podemos usar el ctrl R
+
+------------------------------------
+
+Uso del where
+
+Desde la herramienta grafica  del view podemos usarlo y nos devuelve el codigo
+
+este uso se da con la columna indicada como fillteer
+
+ejemplo tenemos hecha una lista con los datos de  gaseosa descriopcioin nombre id y precio
+
+queremos ver por el precio cuales son mayores a 65
+
+SELECT        TOP (100) PERCENT id AS identificador, nombreProducto AS [nombre del producto], descripcion, precio
+FROM            dbo.producto
+WHERE        (precio > 65)
+ORDER BY precio DESC
+
+esa es la estructura pero alcanza con ingresar >numero mayor en el filter 
+
+
+podemos ver que la estructura del where es despeus del from
+y nos establece una condicion
+
+Select nombrecolumna from nombreTabla WHERE CONDICION
+
+Podemos ver como podemos ponerle dos condiciones concatenados por lo que seria un and y un or 
+ 
+
+SELECT        TOP (100) PERCENT id AS identificador, nombreProducto AS [nombre del producto], descripcion, precio
+FROM            dbo.producto
+WHERE        (precio > 65) AND (id < 4)
+ORDER BY precio DESC
+
+
+SELECT        TOP (100) PERCENT id AS identificador, nombreProducto AS [nombre del producto], descripcion, precio
+FROM            dbo.producto
+WHERE        (precio > 65) OR (id = 4)
+ORDER BY precio DESC
+
+
+Tener en cuenta el and y el or como condicionales en donde el AND toma los casos
+donde las dos clausulas se cumplen y el OR toma los casos donde por lo menos una de las 
+dos clausulas se cumple 
+
+
+-------------------------
+
+USO DEL INSERT
+
+
+Podemos hacerlo con el select row de manera directa en la tabla 
+o podemos hacerlo con el bloque de codigo del insert
+
+INSER INTO nombretabla(campos) values(valores)
+
+forma reducida
+
+INSERT INTO nombretabla values(valoresCompleto)
+
+EJEMPLOS
+
+
+
+  INSERT INTO producto (id,nombreProducto,descripcion,precio)values(11,'Paso de los toros','gaseosa',75)
+
+  INSERT INTO producto values(12,'Fanta','gaseosa',70)
+
+
+
+Recordar que solo podemos usar los id que sean diferentes , despues vamos a ver como hacerlo auto incremental 
+
+de cualquier forma no siempr es la mejor opcion debido a que no necesariamnete son asi
+sino que puede ir generandolos el usuario,  en cualquier situacion es relativo a cada caso 
+
+-----------------------------
+
+Update 
+
+Actuliazacion de datos 
+
+Vamos a crear primero una nueva columna 
+
+en la ultima clase borramos la de descripicon 
+
+Si queremos actulizar desde el manual podemos ir al 
+desgin y cmabiarlo manual
+
+
+despeus sino la forma real practica es con el update
+
+Para enviar de forma general los datos 
+
+
+Update nombreTabla set nombreColumna='contenido' 
+
+Ejemplo 
+
+
+  UPDATE producto SET descripcion='gaseosas';
+
+si queremos cambiar una sola fila o algo de un dato en general usamos un g 
+
+Update nombreTabla set nombreColumna='contenido' where condicion;
+
+
+Ejemplo
+
+  UPDATE producto SET descripcion='gaseosas' WHERE precio>=70;
+----------------------------
+
+Eliminacion de datos con el delete
+
+Vemos primero como hacer una copia de la tabla y vemos el 
+Vemos que una vez que  guardamos todo
+si queremos ejecutar el borrado de una de las tablas podemos hacerlo con el 
+
+delete nombreTabla
+
+en este caso 
+delete producto 
+
+vemos que podemos recuperar datos tambien
+
+si usamos el Bulk 
+
+forma
+
+Bulk 
+Insert nombre tabla
+from 'direccion en el equipo'
+with(firstrow=2, fieldterminator='Cierre suele ser ;',rowterminator='\n salto de linea ')
+
+Osea vemos con que columna arrancar , con que terminan las filas y columnas
+
+
+
+------------------------
+
+between 
+
+nos deja seleccionar un archivo entre dos rangos
+
+sintaxis
+
+select * from nombreTabla where (columna between valor1 and valor2)
+
+
+Ejemplo
+
+
+ SELECT * FROM producto WHERE(id between 1 and 4)
+
+
+
+------------------------
+
+
+LIKE
+Uso del like nos sirve para hacer una busqueda sin necesidad de un igual
+
+en este caso vemos sinaxis
+
+SELECT * FROM nombreTabla WHERE columna like 'palabra' busca la palabra palabra 
+SELECT * FROM nombreTabla WHERE columna like '%palabra' lo que tenga desoues del texto palabra
+SELECT * FROM nombreTabla WHERE columna like 'palabra%' lo que tenga palabra antes de texto 
+SELECT * FROM nombreTabla WHERE columna like '%palabra%' lo que tenga palabra entre dos texto 
+
+Ejemplos
+
+Insert into producto values(5,'Paso de los toros','gaseosas especiales',80)
+
+ select * from  producto where	nombreProducto like '%toros'
+ 
+ select * from  producto where	nombreProducto like 'paso%'
+
+ 
+ select * from  producto where	nombreProducto like '%coca%'
+
+  
+
+------------------ 
+IN
+
+podemos usar para hacer seleccion el or y el and
+pero lo mejor es usar el in
+
+SELECT * FROM nombreTabla WHERE columna like '%palabra%' lo que tenga palabra entre dos texto 
+
+Ejemplo
+
+select from producto where (condicion in(opciones ))
+
+ejemplo
+
+
+ select * from producto where(id in(1,2,3,4))
+
+
+-----------------------------------
+
+Crear consultas multiples 
+
+estructura 
+
+usar los conectivos logicos
+
+SELECT * FROM nombreTabla WHERE (condicon1) or (condicion2)
+
+las condiciones puede tener complejitud como ser un like  y un in etc
+
+ejemplo  
+
+
+ SELECT * FROM producto WHERE (id in(1,2,3))or (precio<=70)
+
+-----------------------------
+
+ /*Crear una tabla haciendo referencia a una primary
+ key de otra tabla
+ */
+  create table infocliente(
+ 
+	idPersona int foreign key(idPersona)/*Esto nos indica que esta sera la llave secuandaria */
+	references clientesNueva(id),/*Establecemos las realacion*/
+	/**/
+	direccion nvarchar(50),
+	cedula int not null)
+
+
+--------------------------------
+
+Combinacion de tablas o uso de los inner 
+
+en este caso vemos como podemos usar el inner para hacer la conexicon entre dos tablas 
+
+con la herramienta visual podemos ir a view y seleccionar dos tablas de manera directa nos va a dar la relacion entre las tablas 
+
+nos deja el codigo a modo de ejemlplo dejo el codigo generado 
+SELECT        dbo.Clientes.id, dbo.producto.id AS Expr1, dbo.Clientes.nombre, dbo.producto.nombreProducto, dbo.producto.descripcion, dbo.Clientes.telefono, dbo.producto.precio
+FROM            dbo.Clientes INNER JOIN
+                         dbo.producto ON dbo.Clientes.id = dbo.producto.id
+
+
+las estructura seria  
+
+SELECT LoQueTraemos
+FROM tabla INNER  JOIN 
+	tabla on relacion=relacion
+
+
+
+Vemos las variantes
+
+en ves de inner LEFT JOIN 
+
+nos da la infomracion de la tabla que nombramos a la izquierda
+
+si usmaos en vez de inner RIGHT JOIN muestra toda la informacion de la tabla derecha 
+
+si ponemos FULL OUTER JOIN es de las dos tablas que presentan la relacion 
+
+
+---------------------------
+
+Vemos caso de la funcion union
+que es para unir dos consultas 
+
+
+La manera visual es a traves del view ahi nos indica que solo lo podemos hacer con una tabla 
+
+Por lo mismo vamos a la query
+
+a manera sencilla vemos el caso del uso del union 
+
+UNION
+
+Bsatara en ponerle entre las dos consultas del query que vamos a analizar 
+
+en este caso tenemos que ver que las tablas que tenemos no compartan varias columnas aparte de las key 
+
+
+---------------
+
+Como determinar un promedio 
+
+Podemos hacerlo a  partir de la funcion reservada avg
+
+esta misma no da la posibilidad de hacerlo con la sintaxis
+
+SELECT AVG(columna) AS Promedio FROM nombreTabla 
+
+Ejemplo
+
+
+	SELECT  AVG(precio)AS PROMEDIO FROM producto
+
+
+-----------------------------------------
+
+Determinar la suma de una tabla 
+
+SELECT SUM(nombreColumna )AS nombreCambiar FROM TABLA 
+
+Ejemplo combinando 
+
+
+
+
+	SELECT SUM(precio)AS total from producto where(id<5)
+
+------------------------
+
+Uso del MAX y del MIN
+
+Sintaxis
+
+SELECT MAX(columna) AS RENOMBRE FROM tabla 
+
+SELECT MIN(columna) AS RENOMBRE FROM tabla 
+
+
+Ejemplos
+
+	SELECT MAX(precio) AS MAXIMO FROM producto 
+
+	SELECT MIN(precio)AS MINIMO FROM producto
+
+
+---------------------------
+
+Buscar el primero y el ultimo registro 
+
+Lo vemos con el caso de dos ejemplos practicos pero cumple la misma logica para lso demas casos 
+
+
+	/*En este caso seleccionando por el id primero nos da el primero*/
+	select top(1) * from producto
+
+
+	/*aca usando el desc nos da como primero el ultimo id */
+	select top(1) * from producto
+	order by id desc
+-----------------------
+
+Contar algo con la clausula COUNT 
+
+Sintaxis
+
+SELECT COUNT(columna)AS nombreSalida FROM nombreTabla  
+
+
+EJEMPLO
+
+SELECT COUNT(id)AS nombreSalida FROM producto
+
+
+
+----------------------------
+
+Caso de un diccionario de datos 
+
+
+Son casos genericos donde nos deja hacer tareas especificas que no devuelven un error 
+o no deberian devolever ningun error usando cualquier base de datos 
+
+esto nos sirve en caso de ya tener una buena lectura de SQL 
+
+y nos sirve como guia correspondiente 
+
+
+EJEMPLO DE INTERNET 
+https://mega.nz/file/0cBwXKaC#t-Pw7mf6rYPYsUBfSRjXw-vwtinxSBbSebiXjRC3b3Y
+
+
+-----------------------------------------------------
+
+Procedimientos almacenados 
+
+STORED PROCESERUD
+
+Estrutuctura basica 
+
+CREATE PROCEDURE nombreProdcedure @nombreParamteroAUtilziar tipoDato,
+AS
+BEGIN
+
+ACA VEMOS LA ACCION QUE QUEREMOS QUE HAGA
+
+
+
+END
+
+EXEC nombreProcedure
+
+
+Vemos entonce que para realizar un procedure definimos el bloque de codigo correspondiente 
+Luego de ello Ejecuta
+
+CREATE PROCEDURE revisionPorProducto @nombreProducto nVarchar(40),@precio int
+AS
+BEGIN
+
+SELECT * FROM producto where nombreProducto=@nombreProducto and precio=@precio;
+print'Hecho correctamente '
+
+END
+
+exec revisionPorProducto 'coca',80 
+
+Entonces en el caso de encontrar el registro con la coca a ese precio 
+
+
+
+----------------------------------
+
+Clausula identity
+nos sirve para que se autooincremental el id 
+
+o nuestra llave primaria 
+
+	
+Simplemente consiste el agregarle el identity a nuestra tabla
+
+luego de definir el primary key
+
+ejemplo
+ 
+Create table clientesNueva(
+
+	id int primary key identity(20,5) not null,
+	nombre nVarchar(40),
+	sobreCliente nVarchar(100)	
+	)
+
+
+Si estamos desde la parte grafica vamos al desig nos paramos en la llave primaria y
+buscamos en la parte de propiedades de columna para agregarle el identuty coomo yes
+
+
+
+-----------------------------
+
+DROP y TRUNCATE
+
+TRUNCATE table nombreTabla 
+
+Nos borra los datos que tenemos en la misma base de datos
+
+DROP table tabla
+
+Elimina todala tabla no formatea
+
+--------------------------
+
+REgistros en mayuscula o minusculas 
+
+caso del upper y del lower
+
+select upper(ColumnaConVarchar)as (renombre) , lower(columnaConVarchar)as (renombre) from nombreTabla 
+
+
+
+EJEMPLO
+
+
+select upper(nombreProducto) as GASEOSA , lower(descripcion) from producto
+---------------------------
+
+T-SQL
+
+Transact SQL es una extension para que pueda servir de forma mas practica en casos 
+de negocios de la manera que lo convierte en un lenguaje de programacion basico 
+
+----------------------------------
+
+Lo primero que vemos es la intaciacion de variables 
+
+
+declare @nombreVariable tipoVariable
+
+set @nombreVariable tipoVariable= valor;
+
+print @nombreVariable
+
+Ejemplo
+
+
+declare @hola nVarchar(20);
+set @hola = 'Hola mundo';
+
+print @hola
+
+
+declare @primera int ;
+set @primera = 10;
+
+print @primera
+
+
+
+
+
+con el + concatenemos simil a java
+
+y con el convert previo a la palabra y seguido el dato que queremos podemos convertir el tipo de dato 
+
+--------------------------------------
+
+Lo que vemos tambien que resta de la concantenacion es el uso de los oepradores 
+
+aritmeticos
+
++
+- 
+/ 
+*
+% resto
+
+
+Se usa de manera normal
+
+vemos ejemplo
+
+
+declare @num1 int 
+declare @num2 int 
+
+set @num1=10
+set @num2=20
+
+print @num1+@num2
+print @num1-@num2
+print @num1*@num2
+print @num2/@num1
+print @num2%@num1
+
+print 'Se cargaron dos numeros'
+
+
+-------------------------------------
+
+Uso del if 
+
+condicion y explicar el ciclo de accion de la estructura de control if
+
+Estructura
+
+IF condicion
+cicloAccionIf
+ELSE
+cicloAccionElse
+
+
+
+Ejemplo
+
+
+declare @num1 int 
+declare @num2 int 
+
+set @num1=10
+set @num2=20
+
+IF @num1>=@num2 
+print 'el primero es mayor'
+ELSE 
+print 'No es cierto'
+
+Simbolos
+
+== igual
+=
+>= mayor igual
+<= menor igual
+!= distinto 
+
+podemos usar el and y el or 
+
+
+---------------------------------------
+
+Ciclo while 
+
+Estructura repetitiva
+
+while (condicion)
+begin 
+
+ciclo accion
+
+end
+
+EJEMPLO
+
+
+
+declare @cont int 
+
+set @cont=10
+
+while(@cont<100)
+begin 
+	set @cont=@cont+1
+	print 'hola, soy el numero:'+ convert(nVarchar(20),@cont)
+	
+
+end
+
+
+
+-------------------------
+
+Uso del case similar al switch 
+No se deja estructura pero se explica el concepto
+
+y damos el ejemplo
+
+
+Estrututra 
+
+CASE @QueAnaliza
+WHEN estadoQueAnliza=? THEN loQueQuerramosDevolver
+WHEN estadoQueAnliza=? THEN loQueQuerramosDevolver
+WHEN estadoQueAnliza=? THEN loQueQuerramosDevolver
+WHEN estadoQueAnliza=? THEN loQueQuerramosDevolver
+END
+
+PRINT @loQueQuerramosDevolver
+
+
+EJEMPLO
+
+
+
+
+set @avion='condor'
+set @estado='volando'
+
+set @aviso= (CASE @estado
+	when 'volando' then 'el avion '+@avion+'esta volando'
+	when 'detenido' then 'el avion '+@avion+'no esta volando'
+	when 'cargando' then 'el avion '+@avion+'se esta cargando el avion '
+end
+)
+print @aviso
+
+----------------------------
+
+bloque trycatch
+
+
+Nos permite tomar un bloque para el caso del error 
+
+Vemos como emnepzamos y cerramos cada bloque de codigo para el try catch 
+
+begin try 
+
+codigo que peude tirar error
+
+
+end try	
+
+begin catch
+
+codigo que deuvelve en caso del error 
+
+end catch
+
+EJEMPLO
+
+
+declare @edad int
+
+set @edad='veinte';
+
+print @edad
+
+end try
+
+begin catch
+
+print 'Error al leer el numero'
+print error_message()
+end catch
+-----------------------------
+
+CURSOR
+El mismo nos permite movernos como si fuera un scroll de diferente formas por nuestras tablas en sql 
+
+
+/*Creacion de un cursor */
+
+/*Nos sirve para retomar informacion de manera
+mas dinamica
+*/
+
+
+declare cursorEjemplo Cursor Scroll
+/*Desde donde buscamos la data*/
+
+for select * from producto
+
+/*Tiene siempre su apertura y su cierre*/
+open cursorEjemplo
+
+/*Seleccion del siguiente registro*/
+fetch next from cursorEjemplo
+/*tenemos
+
+next nos da  el siguiente empezando desde cero
+
+prior devuleve el primero
+first primero tambien
+last ultimo 
+
+*/
+
+
+
+/*Cierre*/
+close cursorEjemplo
+
+/*Hay que cerrar tambien el uso de memoria del cursor*/
+deallocate cursorEjemplo
+
+EJEMPLO PARA TRAER OBJETOS DE UNA TABLA
+
+
+declare @id int 
+declare @nombre nVarchar(30)
+declare @descrip nVarchar(30)
+
+
+declare cursorUno Cursor Scroll
+for select * from clientesNueva
+
+open cursorUno
+/*Hacemos que el contenido ingrese en las variables*/
+fetch next from cursorUno into @id,@nombre,@descrip
+
+/*Usamos el fetch status para indicar que dentenga el ciclo
+cuando tenga algun registro nulo 
+*/
+while(@@FETCH_STATUS=0)
+
+BEGIN
+
+ print convert(nVarchar(20),@id)+' '+@nombre+' '+@descrip
+
+ /*Hacemos la sobre escritura para indicarle que siga
+ 
+ en el siguiente
+ */
+
+ fetch next from cursorUno into @id, @nombre,@descrip
+
+END
+
+close cursorUno
+
+deallocate cursorUno
+
+
+
+*****
+Vemos caso para cagar en otra tabla 
+
+
+Generamos primero la tabla con la misma cantidad de campos
+
+
+declare @id int 
+declare @nombre nVarchar(30)
+declare @descrip nVarchar(30)
+
+
+declare cursorUno Cursor Scroll
+for select * from clientesNueva
+
+open cursorUno
+/*Hacemos que el contenido ingrese en las variables*/
+fetch next from cursorUno into @id,@nombre,@descrip
+
+/*Usamos el fetch status para indicar que dentenga el ciclo
+cuando tenga algun registro nulo 
+*/
+while(@@FETCH_STATUS=0)
+
+BEGIN
+
+ insert into TablaCargaCursor values(@id,@nombre,@descrip)
+
+ /*Hacemos la sobre escritura para indicarle que siga
+ 
+ en el siguiente
+ */
+
+ fetch next from cursorUno into @id, @nombre,@descrip
+
+END
+
+close cursorUno
+
+deallocate cursorUno
+
+
+
+
+----------------------------
+
+
+Como cargar una base de datos nueva a sql  server
+
+tenemos siempre un archivo mdf y ldf 
+
+mdf es la base de datos
+
+y el ldf es la completa
+
+una vez descargadas podemos copiar estas dos
+
+de esta manera ir a donde instalamos sql server
+
+despeus la carpeta de express
+
+Luego en DATA
+
+AQUI en este punto estan las bases de datos por defecto
+
+Despues vamos al sql server le damos click derecho en base de dato y seleccionamos attach
+
+vamos a presionar el add
+
+seleccionamos en la carpeta data la base de datos que queremos subir y ya podemos confirmar para empezar a trabjar con ella 
+
+
+--------------------------------------------
+
+Estructura basica de un trigger
+
+
+LOS TRIGGERs
+son disparadores que se ejecutan para cuando se realiza una accion en alguna tabla 
+
+Vemos el caso del uso para los distinto disparadores 
+
+/*Caso del for insert */
+
+
+--Para Generarlo usamos el crear
+
+/*el nombre indicar la tabla en la que trabajamos 
+y que accion queremos que sea el disparador
+*/
+create trigger TR_productos_insert
+/*Sobre que tabla trabajamos*/
+ON producto
+
+/*Podemos realizar for / after / instead of  /insert /update / delete*/
+
+for insert 
+/*Accion a realizar */
+as
+print 'Hubo un cambio en la clase producto'
+
+
+/*Ejecutamos una prueba */
+
+insert into producto values(17,'Rockstar','Energizante',100)
+
+
+
+En el caso de AFTER Luego de hecho el cambio avisa 
+
+
+
+
+
+
+--Para Generarlo usamos el crear
+
+/*el nombre indicar la tabla en la que trabajamos 
+y que accion queremos que sea el disparador
+*/
+create trigger TR_productos_insert2
+/*Sobre que tabla trabajamos*/
+ON producto
+
+/*Podemos realizar for / after / instead of  /insert /update / delete*/
+
+after insert 
+/*Accion a realizar */
+as
+print 'Hubo un cambio en la clase producto'
+
+
+/*Ejecutamos una prueba */
+
+insert into producto values(18,'Speed','Energizante',100)
+
+
+
+Caso del insert of 
+
+
+	--Para Generarlo usamos el crear
+
+	/*el nombre indicar la tabla en la que trabajamos 
+	y que accion queremos que sea el disparador
+	*/
+	create trigger TR_productos_insert3
+	/*Sobre que tabla trabajamos*/
+	ON producto
+
+	/*Podemos realizar for / after / instead of  /insert /update / delete*/
+
+	instead of  insert 
+	/*Accion a realizar */
+	as
+	print 'Hubo un cambio en la clase producto con el insert'
+
+
+	/*Ejecutamos una prueba */
+
+	insert into producto values(18,'Speed','Energizante',100)
+
+
+Vemos que ese caso nos da la opcion de que haga algo en caso del insert por lo mismo no nos deja el cambio sino que hace la opcion que nosotros le indiquemos 
+
+En la carpeta de trigger tenemos los que gebneramos y desde ahi los podemos eliminar 
+
+Ahora vemos de hacer un caso mas funcional
+
+en la opcion queremos cargue cosas dentor de otra tabla cuando se realiza el insert
+
+---------------------------------------
+
+
+REPOSITOR COMPLETO CON QUERY DE EJEMPLOS
+
+
+
+https://github.com/TecnoBinaria/Query_Curso_SQL_Server
+
+
+
+
+-----------------------
+
+Casos de XML 
+
+podemos pasar los datos de forma completa a otro tipo de archivo
+
+
+
+--Exportar registros a un XML 
+
+
+select * from producto
+
+/*A donde los enviamos */
+--for xml auto
+
+--Caso de aplicacion mas completa 
+--for XML raw, elements, root
+
+--Cambiando nombre a las etiquetas
+
+for XML raw('Registro'), elements ,root ('XML')
+
+
+-----------------------
+
+Importar desde un excel a un sql 
+
+Pasos 
+en la base de datos vamos a import data
+despues seleccionamos el tipo de archivo
+lo buscamos
+Vemos el destino donde queremos que lo guarde
+
+seleccionado SQL NAtive client
+
+mi usurio en caso que me lo pida
+
+y la data abse igual a la priemra que seleccionamos 
+
+despues da opcion de especificar un query o crear una tabla
+
+elegimos la tabla nos da una vista previa 
+
+vemos si queremos selccionar los cambioso como el identity
+
+damos next en general ahora
+
+----------------------
+
+Exportar a un excel desde sql 
+
+Seleccionamos primero la base de datos con la tabla
+
+despues es casi inverso
+seleccionamos la base de datos
+
+el destino con el tipo de datos
+
+seleccionamos la tabla
+
+vemos que debemos sacarle el simbolo de dolar en la tabla 
+
+--------------------------
+
+Insertar los valores de una tabla dentro de otra
+
+Insert into nombreTabla(campos)
+select * from nombreBasedatosOrigen.[tablaOrigen]
+
+
+----------------------
+
+CLAUSULA DATENAME
+
+el primer parametro es lo que queremos averiguar 
+
+getdate() recordar que sirve para sacar la fecha actuual 
+
+Print Datename (moth,getdate())
+
+
+
+
+/*Vemos que teniendo una fecha podemos recuperar valores de la misma */
+
+/*
+
+moth
+quarter
+year
+dayofyear
+day
+week
+weekday
+hour 
+minute
+second
+milisecond
+
+
+
+*/
+
+PRINT DATENAME(mont h,getdate())
+
+PRINT DATENAME(dayofyear,getdate())
+PRINT DATENAME(week,getdate())
+PRINT DATENAME(year,getdate())
+PRINT DATENAME(quarter,getdate())
+PRINT DATENAME(hour,getdate())
+
+
+
+-----------------------
+Generar vistas 
+
+--Informacion de las vistas
+
+
+
+Forma general 
+
+
+
+
+
+CREATE VIEW nombreVista AS
+SELECT nombreColumnas FROM nombreTabla;
+
+--Una vez creada podemos recuperarla de la siguiente forma 
+
+SELECT * FROM nombreVista
+
+--La persona puede ver mas informacion usando el comnado 
+
+sp_help
+
+--y tambien para que vea el codigo escrito
+
+sp_helptext nombreVista
+
+--o para que vea de que tabla depende 
+
+sp_depends nombreVista
+
+
+
+
+
+
+
+EJEMPLO
+
+
+
+
+CREATE VIEW vistaEjemplar AS
+select nombreProducto, descripcion FROM producto;
+
+--Una vez creada podemos recuperarla de la siguiente forma 
+
+SELECT * FROM vistaEjemplar
+
+--La persona puede ver mas informacion usando el comnado 
+
+sp_help
+
+--y tambien para que vea el codigo escrito
+
+sp_helptext vistaEjemplar
+
+--o para que vea de que tabla depende 
+
+sp_depends vistaEjemplar
+
+
+
+
+
+
+
+
+
+----------------------
+Encriptar informacion de una vista 
+
+Esto nos permite que podamos cuidar de mejor fomra la informacion que tenemos 
+
+Solo debemos agregarle 
+
+la palabra reservada with encryption
+
+vemos el ejemplo
+
+como cambia cuando nosotros queremos usar las palabras reservadas help
+
+
+
+CREATE VIEW ejemplo_Dos 
+WITH ENCRYPTION AS
+SELECT nombreProducto,precio,descripcion FROM producto
+
+SELECT * FROM ejemplo_Dos
+
+
+sp_helptext ejemplo_Dos
+
+---------------------
+
+Vemos directo de las query los casos de modifcar eliminar una lista 
+
+QUETY modificar_eliminar 
+
+-------------------
+
+Caso de los Stored Procedures
+
+Procedimientos almacenados 
+
+GENERICO
+
+CREATE PROCEDURE nombreProcedure @parametros tipoDato ,@parametroSalida tipoDato output
+as 
+
+begin
+
+ACCION
+
+end
+
+declare @parametroSalidaLocal
+
+exec nombreProcedure @parametros,@parametrosSalidaLocal output
+
+select @parametroSalidaLocal
+
+
+
+-------------------------------------
+--Creamos primero el procemiento con los paremetros de salida
+
+--Creamos , nombramos , inicializamos y dejamos marcado una salida
+CREATE PROCEDURE SP_Salida @num1 float ,@num2 float ,@resultado float output
+AS
+
+BEGIN
+set @resultado=@num1+@num2;
+
+end
+
+declare @salida float
+exec SP_Salida 20,25,@salida output
+
+select @salida
+
+
+------------------------------------
+Clausula group by 
+
+Nos permite almacenar por caracteristicas en comun 
+
+SELECT nombreColumnas (puede tener alguna accion)
+FROM nombreTabla 
+GROUP BY nombreColumnas 
+
+
+Ejemplo
+
+GroupBY query 
+
+
+-----------------------------
+
+Exists 
+Query
+
+
+
+
+
+
+
+
+
